@@ -1,0 +1,87 @@
+[gd_scene load_steps=8 format=3 uid="uid://bvnc7yqt6udn8"]
+
+[ext_resource type="Texture2D" uid="uid://cqry2synmc5v1" path="res://Assets/board.jpg" id="1_nj5id"]
+[ext_resource type="Script" path="res://Scenes/Board.gd" id="1_xf70g"]
+[ext_resource type="Texture2D" uid="uid://8e8x2orovihs" path="res://Assets/pedra.png" id="2_qeabp"]
+[ext_resource type="Texture2D" uid="uid://dge5p1xhlid4i" path="res://Assets/youlose.png" id="2_uo8i1"]
+[ext_resource type="Texture2D" uid="uid://6r0giogaev1m" path="res://Assets/papel.png" id="3_50ng7"]
+[ext_resource type="Texture2D" uid="uid://84682m4a2p0p" path="res://Assets/youwin.png" id="3_yihqg"]
+[ext_resource type="Texture2D" uid="uid://dy3lhbq73uxfb" path="res://Assets/tesoura.png" id="4_568v8"]
+
+[node name="Board" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_xf70g")
+
+[node name="YouLose" type="TextureRect" parent="."]
+z_index = 1
+offset_left = 240.0
+offset_top = 28.0
+offset_right = 874.0
+offset_bottom = 632.0
+scale = Vector2(0.2, 0.217392)
+texture = ExtResource("2_uo8i1")
+
+[node name="YouWin" type="TextureRect" parent="."]
+z_index = 1
+offset_left = 241.0
+offset_top = 27.0
+offset_right = 845.0
+offset_bottom = 631.0
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("3_yihqg")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 604.0
+offset_bottom = 604.0
+texture = ExtResource("1_nj5id")
+
+[node name="RockButton" type="TextureButton" parent="."]
+layout_mode = 2
+offset_left = 3.0
+offset_top = 441.0
+offset_right = 179.0
+offset_bottom = 597.0
+scale = Vector2(1.08, 1.08)
+texture_normal = ExtResource("2_qeabp")
+
+[node name="PaperButton" type="TextureButton" parent="."]
+layout_mode = 2
+offset_left = 230.0
+offset_top = 434.0
+offset_right = 409.0
+offset_bottom = 590.0
+scale = Vector2(0.92, 0.92)
+texture_normal = ExtResource("3_50ng7")
+
+[node name="scissorsButton" type="TextureButton" parent="."]
+layout_mode = 2
+offset_left = 430.0
+offset_top = 469.0
+offset_right = 614.0
+offset_bottom = 625.0
+scale = Vector2(0.88, 0.88)
+texture_normal = ExtResource("4_568v8")
+
+[node name="EnermyRock" type="TextureRect" parent="."]
+offset_left = 208.0
+offset_top = 197.0
+offset_right = 392.0
+offset_bottom = 348.0
+texture = ExtResource("2_qeabp")
+
+[node name="EnermyPaper" type="TextureRect" parent="."]
+offset_left = 222.0
+offset_top = 188.0
+offset_right = 406.0
+offset_bottom = 344.0
+texture = ExtResource("3_50ng7")
+
+[node name="EnermyScissors" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 226.0
+offset_top = 216.0
+offset_right = 410.0
+offset_bottom = 349.0
+texture = ExtResource("4_568v8")

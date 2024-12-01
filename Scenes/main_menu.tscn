@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=3 uid="uid://cmq4yokimf0ns"]
+
+[ext_resource type="Texture2D" uid="uid://dk8f2b812neuw" path="res://Assets/first.jpg" id="1_i2h8a"]
+[ext_resource type="Script" path="res://Scenes/main_menu.gd" id="1_nkffp"]
+[ext_resource type="Script" path="res://Scenes/start.gd" id="2_qbw3j"]
+[ext_resource type="Script" path="res://Scenes/exit.gd" id="3_hxjee"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_nkffp")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("1_i2h8a")
+
+[node name="Start" type="Button" parent="."]
+layout_mode = 0
+offset_left = 186.0
+offset_top = 268.0
+offset_right = 289.0
+offset_bottom = 349.0
+focus_mode = 0
+flat = true
+script = ExtResource("2_qbw3j")
+
+[node name="Exit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 337.0
+offset_top = 267.0
+offset_right = 430.0
+offset_bottom = 348.0
+focus_mode = 0
+flat = true
+script = ExtResource("3_hxjee")
